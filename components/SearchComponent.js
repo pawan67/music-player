@@ -14,10 +14,13 @@ const SearchComponent = () => {
       >
         <div className=" flex sm:space-x-10">
           <div className=" hidden lg:block space-x-3">
-            <button className="btn btn-circle">
+            <button onClick={() => setPage("")} className="btn btn-circle">
               <AiOutlineArrowLeft />
             </button>
-            <button className="btn btn-circle btn-outline">
+            <button
+              onClick={() => setPage("musiclib")}
+              className="btn btn-circle btn-outline"
+            >
               <AiOutlineArrowRight />
             </button>
           </div>

@@ -15,15 +15,15 @@ const Container = () => {
       } absolute  sm:left-60 px-8 sm:px-10`}
     >
       <h1 className=" text-xl mt-5 sm:text-3xl font-bold">Home</h1>
-      <div className=" transition-all mt-5  flex gap-5 flex-wrap">
+      <div className=" justify-center md:justify-start transition-all mt-5  flex gap-5 flex-wrap">
         {Data.map((item) => (
           <Card key={item.id} data={item} />
         ))}
       </div>
       <div>
-        <h1 className=" text-xl mt-5 sm:text-3xl font-bold">All Songs</h1>
+        <h1 className=" text-xl mt-10 sm:text-3xl font-bold">All Songs</h1>
 
-        <div>
+        <div className=" mt-10 ">
           {Data.map((items) => (
             <MusicList key={items.id} data={items} />
           ))}

@@ -1,15 +1,18 @@
 import React from "react";
+import { useUserContext } from "../context/userContext";
 
 const Card = ({ data }) => {
+  const { songNum, setSongNum } = useUserContext();
   return (
     <>
       <div>
         <img
-          className=" w-36 active:scale-95 cursor-pointer rounded-lg sm:w-40"
+          onClick={() => setSongNum(data.id - 1)}
+          className=" hover:shadow-2xl transition-all hover:scale-105 shadow-xl w-[150px] md:w-36 active:scale-95 cursor-pointer rounded-xl sm:w-40"
           src={data.imgSrc}
           alt=""
         />
-        <h1 className=" font-semibold">{data.title}</h1>
+        <h1 className="   drop-shadow-xl font-semibold">{data.title}</h1>
       </div>
     </>
   );

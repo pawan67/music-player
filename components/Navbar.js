@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { AiFillHome } from "react-icons/ai";
@@ -10,13 +10,33 @@ import { VscClose } from "react-icons/vsc";
 import { IoLogIn } from "react-icons/io5";
 import { useUserContext } from "../context/userContext";
 import { useRouter } from "next/router";
-
+import Data from "../data.json";
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
-  const { isMenu, setMenu, page, setPage } = useUserContext();
+  const [alert, setAlert] = useState(false);
+  const { isMenu, setMenu, page, setPage, songNum, setSongNum } =
+    useUserContext();
+  useEffect(() => {
+    setAlert(true);
+    setTimeout(() => {
+      setAlert(false);
+    }, 3000);
+  }, [songNum]);
   const router = useRouter();
   return (
     <>
+      <div
+        className={`fixed z-[1000] ${
+          alert ? "right-10" : " -right-[1000px]"
+        }  top-14 transition-all alert  shadow-lg max-w-xs`}
+      >
+        <div>
+          <div>
+            <h3 class="font-bold">Playing {Data[songNum].title}</h3>
+            <div class="text-xs">By {Data[songNum].artist} </div>
+          </div>
+        </div>
+      </div>
       <div className=" z-50 relative">
         <div className=" absolute navbar bg-base-100">
           <div className="navbar-start">
@@ -43,11 +63,14 @@ const Navbar = () => {
               </label>
             </div>
           </div>
-          <div className="navbar-center">
+          <div onClick={() => setPage("")} className="navbar-center">
             <a className="btn btn-ghost normal-case text-xl">GroovyMusic</a>
           </div>
           <div className="navbar-end">
-            <button className="btn btn-ghost btn-circle">
+            <button
+              onClick={() => setPage("search")}
+              className="btn btn-ghost btn-circle"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -63,7 +86,10 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-            <button className="btn btn-ghost btn-circle">
+            <button
+              onClick={() => setAlert(true)}
+              className="btn btn-ghost btn-circle"
+            >
               <div className="indicator">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

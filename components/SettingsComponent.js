@@ -31,8 +31,8 @@ const SettingsComponent = () => {
             <li onClick={() => setTheme("dark")}>
               <a>Dark</a>
             </li>
-            <li onClick={() => setTheme("light")}>
-              <a>Light</a>
+            <li onClick={() => setTheme("acid")}>
+              <a>Acid </a>
             </li>
             <li onClick={() => setTheme("lemonade")}>
               <a>Lemonade 🍋</a>
