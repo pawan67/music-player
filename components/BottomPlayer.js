@@ -12,16 +12,26 @@ const BottomPlayer = () => {
   const { songNum, setSongNum } = useUserContext();
   console.log(songNum);
 
+  const [trackProgress, setTrackProgress] = useState(0);
+
   const [play, setPlay] = useState(false);
   const [currentSong, setCurrentSong] = useState(Data[songNum]);
- 
+
   const audioRef = useRef(null);
 
+  
+
   useEffect(() => {
+   
     setCurrentSong(Data[songNum]);
+
     audioRef.current.play();
-    setPlay(true)
+    setPlay(true);
   }, [currentSong, songNum]);
+  useEffect(() => {
+    audioRef.current.pause();
+    setPlay(false);
+  }, []);
   const handlePlay = () => {
     if (play) {
       audioRef.current.pause();
@@ -49,7 +59,11 @@ const BottomPlayer = () => {
       setSongNum(songNum + 1);
     }
   };
-
+  const onScrub = (value) => {
+    // Clear any timers already running
+    audioRef.current.currentTime = value;
+    setTrackProgress(audioRef.current.currentTime);
+  };
   return (
     <div className="  z-50 drop-shadow-lg bg-base-200  fixed bottom-0 right-0 left-0 sm:left-60 backdrop-blur-md  h-[70px] sm:h-20 p-2 flex items-center justify-between px-5  lg:px-10 space-x-10 ">
       <div className=" w-80 items-center flex space-x-2">
@@ -67,12 +81,17 @@ const BottomPlayer = () => {
           </p>
         </div>
       </div>
-      <div>
-        <input
-          className=" hidden md:w-[300px] lg:block xl:w-[800px] range range-xs"
-          type="range"
-        />
-      </div>
+      {/* <input
+        type="range"
+        value={trackProgress}
+        step="1"
+        min="0"
+        max={duration ? duration : `${duration}`}
+        onChange={(e) => onScrub(e.target.value)}
+        className=" hidden md:block xl:w-[600px] 2xl:w-[900px] range range-sm"
+        //   onMouseUp={onScrubEnd}
+        //   onKeyUp={onScrubEnd}
+      /> */}
       <div className=" flex space-x-5 text-2xl">
         <IoPlaySkipBack
           className=" hover:scale-110  active:scale-95"

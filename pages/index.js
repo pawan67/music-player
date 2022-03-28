@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <COMPONENT />
-      <BottomPlayer />
+      {page !== "playingnow" && <BottomPlayer />}
     </div>
   );
 }

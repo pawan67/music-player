@@ -5,7 +5,12 @@ export const useUserContext = () => useContext(UserContext);
 export const UserContextProvider = ({ children }) => {
   const [isMenu, setMenu] = useState(false);
   const [page, setPage] = useState("");
-  const [songNum, setSongNum] = useState(Math.floor(Math.random() * 9));
+  const [songNum, setSongNum] = useState(Math.floor(Math.random() * 10));
+  const [audioSrc, setAudioSrc] = useState("");
+  const [audioName, setAudioName] = useState("");
+  const [audioImg, setAudioImg] = useState("");
+  const [artist, setArtist] = useState("");
+  const [year, setYear] = useState("");
   const contextValue = {
     isMenu,
     setMenu,
@@ -13,6 +18,16 @@ export const UserContextProvider = ({ children }) => {
     setPage,
     songNum,
     setSongNum,
+    audioSrc,
+    setAudioSrc,
+    audioName,
+    setAudioName,
+    audioImg,
+    setAudioImg,
+    artist,
+    setArtist,
+    year,
+    setYear,
   };
   return (
     <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>

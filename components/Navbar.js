@@ -5,7 +5,7 @@ import { AiFillHome } from "react-icons/ai";
 import { MdLibraryMusic } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { RiSearchFill, RiSettings4Fill } from "react-icons/ri";
-import { BsBoxArrowLeft } from "react-icons/bs";
+import { BsBoxArrowLeft, BsFileMusicFill } from "react-icons/bs";
 import { VscClose } from "react-icons/vsc";
 import { IoLogIn } from "react-icons/io5";
 import { useUserContext } from "../context/userContext";
@@ -28,7 +28,7 @@ const Navbar = () => {
       <div
         className={`fixed z-[1000] ${
           alert ? "right-10" : " -right-[1000px]"
-        }  top-14 transition-all alert  shadow-lg max-w-xs`}
+        }  top-14 transition-all alert justify-start  shadow-lg max-w-xs`}
       >
         <div>
           <div>
@@ -87,7 +87,7 @@ const Navbar = () => {
               </svg>
             </button>
             <button
-              onClick={() => setAlert(true)}
+              onClick={() => (alert ? setAlert(false) : setAlert(true))}
               className="btn btn-ghost btn-circle"
             >
               <div className="indicator">
@@ -149,6 +149,20 @@ const Navbar = () => {
               >
                 {" "}
                 <RiSearchFill className=" text-xl" /> Search{" "}
+              </a>
+            </li>
+            <li>
+              <a
+                onClick={() => {
+                  setPage("playingnow");
+                  setMenu(false);
+                }}
+                className={` ${
+                  page === "playingnow" && "bg-primary text-white"
+                }    font-semibold`}
+              >
+                {" "}
+                <BsFileMusicFill className=" text-xl" /> Playing now{" "}
               </a>
             </li>
             <li>
