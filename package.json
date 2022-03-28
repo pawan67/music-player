@@ -1,0 +1,28 @@
+{
+  "name": "music-player",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tailwindcss/line-clamp": "^0.3.1",
+    "aos": "^2.3.4",
+    "daisyui": "^2.13.3",
+    "next": "12.1.1",
+    "next-themes": "^0.1.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.1",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23"
+  }
+}

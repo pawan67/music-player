@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "title": "Barso",
+    "artist": "Ritviz",
+    "time": 257,
+    "src": "/music/Barso.mp3",
+    "imgSrc": "images/barso.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Euphoria ",
+    "artist": "Travis Scott, Kaash Paige",
+    "time": 202,
+    "src": "/music/Euphoria__feat__Travis_Scott___Kaash_Paige_.mp3",
+    "imgSrc": "/images/euphoria.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Falling ",
+    "artist": "Trevor Daniel",
+    "time": 143,
+    "src": "/music/Falling.mp3",
+    "imgSrc": "/images/falling.png"
+  },
+  {
+    "id": 4,
+    "title": "Jeet ",
+    "artist": "Ritviz",
+    "time": 182,
+    "src": "/music/Jeet.mp3",
+    "imgSrc": "/images/jeet.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Khamoshi ",
+    "artist": "Ritviz",
+    "time": 182,
+    "src": "/music/Khamoshi - Ritviz, Karan Kanchan.m4a",
+    "imgSrc": "/images/khamoshi.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Let Me Down Slowly ",
+    "artist": "Alec Benjamin",
+    "time": 182,
+    "src": "/music/Let Me Down Slowly - Alec Benjamin.m4a",
+    "imgSrc": "/images/letmedown.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Mood Remix ",
+    "artist": "Justin Bieber, J Balvin, Iann dior",
+    "time": 182,
+    "src": "/music/Mood__Remix__feat__Justin_Bieber__J_Balvin___iann_dior.mp3",
+    "imgSrc": "/images/mood.jpg"
+  },
+
+  {
+    "id": 8,
+    "title": "Sidewalks ",
+    "artist": "The Weeknd",
+    "time": 182,
+    "src": "/music/Sidewalks.mp3",
+    "imgSrc": "/images/sidewalks.jpg"
+  },
+
+  {
+    "id": 9,
+    "title": "Starboy ",
+    "artist": "The Weeknd",
+    "time": 182,
+    "src": "/music/Starboy.mp3",
+    "imgSrc": "/images/starboy.png"
+  },
+  {
+    "id": 10,
+    "title": "Tragic ",
+    "artist": "Youngboy",
+    "time": 182,
+    "src": "/music/TRAGIC__feat__Youngboy_Never_Broke_Again___Internet_Money_.mp3",
+    "imgSrc": "/images/tragic.jpg"
+  }
+]
