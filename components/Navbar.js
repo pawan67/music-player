@@ -32,8 +32,8 @@ const Navbar = () => {
       >
         <div>
           <div>
-            <h3 class="font-bold">Playing {Data[songNum].title}</h3>
-            <div class="text-xs">By {Data[songNum].artist} </div>
+            <h3 className="font-bold">Playing {Data[songNum].title}</h3>
+            <div className="text-xs">By {Data[songNum].artist} </div>
           </div>
         </div>
       </div>
