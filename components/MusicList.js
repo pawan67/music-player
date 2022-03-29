@@ -25,6 +25,7 @@ const MusicList = ({ data }) => {
   }
   return (
     <div
+      data-aos="zoom-in"
       onClick={() => setSongNum(data.id - 1)}
       className=" hover:bg-base-200 transition-all font-semibold flex items-center cursor-pointer rounded-xl w-full h-16 md:px-5   my-2"
     >

@@ -12,9 +12,11 @@ const SearchComponent = () => {
   const [loading, setLoading] = useState(false);
   const handleSearch = (e) => {
     e.preventDefault();
+    setLoading(true);
     axios
       .get(`https://saavn.me/search/songs?query=${text}&page=1`)
-      .then((response) => setData(response.data.results));
+      .then((response) => setData(response.data.results))
+      .finally(() => setLoading(false));
   };
   return (
     <div>
@@ -52,7 +54,19 @@ const SearchComponent = () => {
             </div>
           </div>
         </div>
-        {data === null ? <SearchTrend /> : <SearchResults data={data} />}
+
+        {data === null ? (
+          loading ? (
+            <div className=" mt-10 font-semibold alert">
+              <button class="btn btn-square loading"></button>
+              Hang on buddy your data is loading
+            </div>
+          ) : (
+            <SearchTrend />
+          )
+        ) : (
+          <SearchResults data={data} />
+        )}
       </div>
     </div>
   );

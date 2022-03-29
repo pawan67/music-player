@@ -120,9 +120,15 @@ const Navbar = () => {
               onClick={() => setMenu(false)}
               className=" sm:hidden text-2xl mt-5 ml-3 mb-5  "
             />
-            <p className=" text-sm text-center font-semibold mb-5 bg-base-100 py-3 rounded-lg active:scale-95 cursor-pointer">
+            <p className="  text-sm text-center font-semibold mb-5 bg-base-100 py-3 rounded-lg active:scale-95 cursor-pointer">
               {" "}
-              Pawan67
+              <a
+                target="_blank"
+                className=" w-full h-full"
+                href="https://pawan67.vercel.app"
+              >
+                Pawan67
+              </a>
             </p>
             <li className=" ">
               <a
@@ -196,14 +202,7 @@ const Navbar = () => {
               </div>
             </li>
           </div>
-          <div className=" bg-base-100 rounded-md absolute bottom-5 left-3 right-3   ">
-            <li>
-              <div className=" active:scale-95   font-semibold  hover:bg-base-100">
-                {" "}
-                <IoLogIn className=" text-xl" /> Login{" "}
-              </div>
-            </li>
-          </div>
+          
         </ul>
       </div>
       {/* <!-- The button to open modal --> */}

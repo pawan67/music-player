@@ -13,9 +13,9 @@ const SettingsComponent = () => {
           isMenu ? " blur-sm" : ""
         } absolute mt-5 sm:mt-2  sm:left-60 px-8 sm:px-10`}
       >
-        <h1 className=" text-2xl font-bold">Personalization</h1>
+        <h1 className=" text-2xl mt-5 font-bold">Personalization</h1>
         <div className="dropdown ">
-          <label tabIndex="0" className=" btn  mt-3">
+          <label tabIndex="0" className=" btn  mt-5">
             Change theme <IoColorPaletteSharp className="  ml-2 text-xl" />
           </label>
           <ul
@@ -28,9 +28,7 @@ const SettingsComponent = () => {
             <li onClick={() => setTheme("black")}>
               <a>Black</a>
             </li>
-            <li onClick={() => setTheme("dark")}>
-              <a>Dark</a>
-            </li>
+
             <li onClick={() => setTheme("acid")}>
               <a>Acid </a>
             </li>
@@ -40,33 +38,30 @@ const SettingsComponent = () => {
             <li onClick={() => setTheme("wireframe")}>
               <a>Wireframe</a>
             </li>
-            <li onClick={() => setTheme("coffee")}>
-              <a>Coffee ☕</a>
-            </li>
           </ul>
         </div>
         <div>
-          <h1 className=" mt-5 text-2xl font-bold">About Groovy music</h1>
-          <p className=" md:w-3/4 mt-3">
+          <h1 className=" mt-10 text-2xl font-bold">About Groovy music</h1>
+          <p className=" font-medium md:w-3/4 mt-3">
             Groovy music is a music player made with ReactJs, NextJs and
             TailwindCSS for Searching music I'm using{" "}
-            <span className=" text-info underline">saavn.me</span> API and for
-            backend I'm using{" "}
-            <span className=" text-info underline">firebase </span> for
-            authentication.
+            <a href="https://saavn.me" className=" text-info underline">
+              saavn.me
+            </a>{" "}
+            API
           </p>
         </div>
         <div>
-          <h1 className=" mt-5 text-2xl font-bold">About me</h1>
-          <div className=" flex mt-3 items-center text-xl font-semibold space-x-2">
+          <h1 className=" mt-10 text-2xl font-bold">About me</h1>
+          <div className=" flex mt-5 items-center text-xl font-semibold space-x-2">
             <img
-              className=" w-10 rounded-full"
+              className=" w-10 rounded-xl"
               src="https://pawan67.vercel.app/images/image1.jpg"
               alt=""
             />
             <p>Pawan67</p>
           </div>
-          <p className=" mt-2">
+          <p className=" mt-5 font-medium ">
             I am self-taught Front-end Web developer who loves to build amazing
             and useful websites.
           </p>

@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useUserContext } from "../context/userContext";
 //BsFillPlayFill
 import { BsPlayCircleFill, BsFillPauseCircleFill } from "react-icons/bs";
+import Head from "next/head";
 const AudioPlayer = () => {
   const {
     audioSrc,
@@ -15,7 +16,7 @@ const AudioPlayer = () => {
     year,
     setYear,
   } = useUserContext();
-  
+
   const audioRef = useRef(new Audio(audioSrc));
   const [trackIndex, setTrackIndex] = useState(0);
   const [trackProgress, setTrackProgress] = useState(0);
@@ -43,8 +44,11 @@ const AudioPlayer = () => {
     ? `${(trackProgress / duration) * 100}%`
     : "0%";
   return (
-    <div>
-      <div className=" xl:ml-24 2xl:ml-36 mt-10 card lg:card-side bg-base-100 shadow-xl">
+    <div data-aos="fade-down">
+      <Head>
+        <title> Playing {audioName} </title>
+      </Head>
+      <div className=" xl:ml-24 2xl:ml-40 mt-10 2xl:mt-32 card lg:card-side bg-base-100 ">
         <figure>
           <img src={audioImg} alt="Album" />
         </figure>

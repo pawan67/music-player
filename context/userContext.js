@@ -5,7 +5,7 @@ export const useUserContext = () => useContext(UserContext);
 export const UserContextProvider = ({ children }) => {
   const [isMenu, setMenu] = useState(false);
   const [page, setPage] = useState("");
-  const [songNum, setSongNum] = useState(Math.floor(Math.random() * 10));
+  const [songNum, setSongNum] = useState(3);
   const [audioSrc, setAudioSrc] = useState("");
   const [audioName, setAudioName] = useState("");
   const [audioImg, setAudioImg] = useState("");
