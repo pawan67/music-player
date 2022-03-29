@@ -22,10 +22,10 @@ const PlayingNow = () => {
           isMenu ? " blur-sm" : ""
         } absolute  flex justify-center  sm:left-60 px-8 sm:px-10`}
       >
-        <div data-aos="fade-right" class=" mt-10 alert alert-info shadow-lg">
+        <div data-aos="fade-right" className=" mt-10 alert alert-info shadow-lg">
           <div>
             <span>This Player only plays songs from online search</span>
-            <button onClick={() => setPage("search")} class="btn gap-2">
+            <button onClick={() => setPage("search")} className="btn gap-2">
               <BsSearch /> Search Now
             </button>
           </div>

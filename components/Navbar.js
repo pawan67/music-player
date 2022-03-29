@@ -28,7 +28,7 @@ const Navbar = () => {
       <div
         className={`fixed z-[1000] ${
           alert ? "right-10" : " -right-[1000px]"
-        }  top-14 transition-all alert justify-start  shadow-lg max-w-xs`}
+        }  top-14 transition-all bg-base-200 p-3 rounded-xl   md:alert  justify-start  shadow-lg max-w-xs`}
       >
         <div>
           <div>
@@ -124,6 +124,7 @@ const Navbar = () => {
               {" "}
               <a
                 target="_blank"
+                rel="noreferrer"
                 className=" w-full h-full"
                 href="https://pawan67.vercel.app"
               >
@@ -202,7 +203,6 @@ const Navbar = () => {
               </div>
             </li>
           </div>
-          
         </ul>
       </div>
       {/* <!-- The button to open modal --> */}

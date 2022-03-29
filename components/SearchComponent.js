@@ -58,7 +58,7 @@ const SearchComponent = () => {
         {data === null ? (
           loading ? (
             <div className=" mt-10 font-semibold alert">
-              <button class="btn btn-square loading"></button>
+              <button className="btn btn-square loading"></button>
               Hang on buddy your data is loading
             </div>
           ) : (
