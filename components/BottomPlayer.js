@@ -8,6 +8,21 @@ import { CgHeart } from "react-icons/cg";
 import Data from "../data.json";
 import { useUserContext } from "../context/userContext";
 const BottomPlayer = () => {
+  const {
+    audioSrc,
+    setAudioSrc,
+    audioName,
+    setAudioName,
+    audioImg,
+    setAudioImg,
+    setPage,
+
+    artist,
+    setArtist,
+    year,
+    setYear,
+  } = useUserContext();
+
   const RandomNumber = Math.floor(Math.random() * 10);
   const { songNum, setSongNum } = useUserContext();
   console.log(songNum);
@@ -17,14 +32,11 @@ const BottomPlayer = () => {
   const [play, setPlay] = useState(false);
   const [currentSong, setCurrentSong] = useState(Data[songNum]);
 
-  const audioRef = useRef(null);
-
-  
-
   useEffect(() => {
-   
     setCurrentSong(Data[songNum]);
-
+    // setInterval(() => {
+    //   setTrackProgress(audioRef.current.currentTime);
+    // }, 500);
     audioRef.current.play();
     setPlay(true);
   }, [currentSong, songNum]);
@@ -32,6 +44,8 @@ const BottomPlayer = () => {
     audioRef.current.pause();
     setPlay(false);
   }, []);
+  const audioRef = useRef(null);
+
   const handlePlay = () => {
     if (play) {
       audioRef.current.pause();
@@ -51,7 +65,6 @@ const BottomPlayer = () => {
       setSongNum(songNum - 1);
     }
   };
-
   const handleNext = () => {
     if (songNum === Data.length - 1) {
       setSongNum(0);
@@ -59,14 +72,25 @@ const BottomPlayer = () => {
       setSongNum(songNum + 1);
     }
   };
-  const onScrub = (value) => {
-    // Clear any timers already running
-    audioRef.current.currentTime = value;
-    setTrackProgress(audioRef.current.currentTime);
+  // const audioRef = useRef(new Audio(currentSong.src));
+  // const duration = audioRef.current.duration;
+
+  // const onScrub = (value) => {
+  //   // Clear any timers already running
+  //   audioRef.current.currentTime = value;
+  //   setTrackProgress(audioRef.current.currentTime);
+  // };
+  const handleClick = () => {
+    setAudioImg(currentSong.imgSrc);
+    setAudioSrc(currentSong.src);
+    setAudioName(currentSong.title);
+    setArtist(currentSong.artist);
+    // setYear(data.year);
+    setPage("playingnow");
   };
   return (
     <div className="  z-50 drop-shadow-lg bg-base-200  fixed bottom-0 right-0 left-0 sm:left-60 backdrop-blur-md  h-[70px] sm:h-20 p-2 flex items-center justify-between px-5  lg:px-10 space-x-10 ">
-      <div className=" w-80 items-center flex space-x-2">
+      <div onClick={handleClick} className=" cursor-pointer hover:bg-base-300 p-1 rounded-lg w-80 items-center flex space-x-2">
         <img
           className=" rounded-xl shadow-md h-10 sm:h-14"
           src={currentSong.imgSrc}
@@ -88,7 +112,7 @@ const BottomPlayer = () => {
         min="0"
         max={duration ? duration : `${duration}`}
         onChange={(e) => onScrub(e.target.value)}
-        className=" hidden md:block xl:w-[600px] 2xl:w-[900px] range range-sm"
+        className=" hidden md:block xl:w-[600px] 2xl:w-[1500px] range range-sm"
         //   onMouseUp={onScrubEnd}
         //   onKeyUp={onScrubEnd}
       /> */}

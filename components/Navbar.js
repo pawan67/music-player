@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { AiFillHome } from "react-icons/ai";
+import { CgMusic } from "react-icons/cg";
 import { MdLibraryMusic } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { RiSearchFill, RiSettings4Fill } from "react-icons/ri";
@@ -64,7 +65,10 @@ const Navbar = () => {
             </div>
           </div>
           <div onClick={() => setPage("")} className="navbar-center">
-            <a className="btn btn-ghost normal-case text-xl">GroovyMusic</a>
+            <a className="btn btn-ghost normal-case text-xl">
+              {" "}
+              <CgMusic className=" mr-2" /> GroovyMusic
+            </a>
           </div>
           <div className="navbar-end">
             <button

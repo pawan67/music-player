@@ -20,10 +20,13 @@ const SettingsComponent = () => {
           </label>
           <ul
             tabIndex="0"
-            className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            className=" border dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li onClick={() => setTheme("garden")}>
               <a>Default</a>
+            </li>
+            <li onClick={() => setTheme("dark")}>
+              <a>Dark</a>
             </li>
             <li onClick={() => setTheme("black")}>
               <a>Black</a>

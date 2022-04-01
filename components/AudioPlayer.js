@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useUserContext } from "../context/userContext";
 //BsFillPlayFill
 import { BsPlayCircleFill, BsFillPauseCircleFill } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
 import Head from "next/head";
 const AudioPlayer = () => {
   const {
@@ -50,7 +51,7 @@ const AudioPlayer = () => {
       </Head>
       <div className=" xl:ml-24 2xl:ml-40 mt-10 2xl:mt-32 card lg:card-side bg-base-100 ">
         <figure>
-          <img src={audioImg} alt="Album" />
+          <img className=" w-[480px] rounded-lg" src={audioImg} alt="Album" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{audioName}</h2>
@@ -92,7 +93,7 @@ const AudioPlayer = () => {
 
           <div className="card-actions mt-10 justify-end">
             <a download href={audioSrc} className="btn btn-primary">
-              Download song
+              <HiDownload className=" text-xl mr-2" /> Download song
             </a>
           </div>
         </div>

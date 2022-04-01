@@ -15,12 +15,14 @@
 ## Install
 
 ```sh
-npm run dev
+git clone https://github.com/pawan67/music-player
 ```
 
 ## Usage
 
 ```sh
+cd music-player
+npm i
 npm run start
 ```
 
@@ -31,9 +33,3 @@ npm run start
 * Website: pawan67.vercel.app/
 * Github: [@pawan67](https://github.com/pawan67)
 
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
