@@ -37,6 +37,12 @@ const Navbar = () => {
             <div className="text-xs">By {Data[songNum].artist} </div>
           </div>
         </div>
+        <div
+          onClick={() => setAlert(false)}
+          className=" bg-base-300 px-4 font-bold text-center rounded-full py-2 cursor-pointer"
+        >
+          <div>x</div>
+        </div>
       </div>
       <div className=" z-50 relative">
         <div className=" absolute navbar bg-base-100">

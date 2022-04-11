@@ -75,11 +75,11 @@ const BottomPlayer = () => {
   // const audioRef = useRef(new Audio(currentSong.src));
   // const duration = audioRef.current.duration;
 
-  // const onScrub = (value) => {
-  //   // Clear any timers already running
-  //   audioRef.current.currentTime = value;
-  //   setTrackProgress(audioRef.current.currentTime);
-  // };
+  const onScrub = (value) => {
+    // Clear any timers already running
+    audioRef.current.currentTime = value;
+    setTrackProgress(audioRef.current.currentTime);
+  };
   const handleClick = () => {
     setAudioImg(currentSong.imgSrc);
     setAudioSrc(currentSong.src);
@@ -88,9 +88,20 @@ const BottomPlayer = () => {
     // setYear(data.year);
     setPage("playingnow");
   };
+  
+    useEffect(()=> {
+
+      setInterval(() => {
+        setTrackProgress(audioRef.current.currentTime);
+      }, 10);
+    },[audioRef.current])
+  
   return (
     <div className="  z-50 drop-shadow-lg bg-base-200  fixed bottom-0 right-0 left-0 sm:left-60 backdrop-blur-md  h-[70px] sm:h-20 p-2 flex items-center justify-between px-5  lg:px-10 space-x-10 ">
-      <div onClick={handleClick} className=" cursor-pointer hover:bg-base-300 p-1 rounded-lg w-80 items-center flex space-x-2">
+      <div
+        onClick={handleClick}
+        className=" cursor-pointer hover:bg-base-300 p-1 rounded-lg w-80 items-center flex space-x-2"
+      >
         <img
           className=" rounded-xl shadow-md h-10 sm:h-14"
           src={currentSong.imgSrc}
@@ -105,17 +116,24 @@ const BottomPlayer = () => {
           </p>
         </div>
       </div>
-      {/* <input
-        type="range"
-        value={trackProgress}
-        step="1"
-        min="0"
-        max={duration ? duration : `${duration}`}
-        onChange={(e) => onScrub(e.target.value)}
-        className=" hidden md:block xl:w-[600px] 2xl:w-[1500px] range range-sm"
-        //   onMouseUp={onScrubEnd}
-        //   onKeyUp={onScrubEnd}
-      /> */}
+      {audioRef.current && (
+        <input
+          type="range"
+          value={trackProgress}
+          step="1"
+          min="0"
+          max={
+            audioRef.current.duration
+              ? audioRef.current.duration
+              : `${audioRef.current.duration}`
+          }
+          onChange={(e) => onScrub(e.target.value)}
+          className=" hidden md:block xl:w-[600px] 2xl:w-[1500px] range range-sm"
+          //   onMouseUp={onScrubEnd}
+          //   onKeyUp={onScrubEnd}
+        />
+      )}
+
       <div className=" flex space-x-5 text-2xl">
         <IoPlaySkipBack
           className=" hover:scale-110  active:scale-95"
