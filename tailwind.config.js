@@ -1,6 +1,6 @@
 module.exports = {
   daisyui: {
-    themes: ["garden", "acid", "black", "dark", "lemonade", "wireframe"],
+    themes: [ "black", "wireframe"],
   },
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",

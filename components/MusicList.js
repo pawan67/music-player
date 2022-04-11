@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 import { useUserContext } from "../context/userContext";
 
 const MusicList = ({ data }) => {
@@ -21,14 +22,18 @@ const MusicList = ({ data }) => {
     var mDisplay =
       m !== 0 ? m + (m == 1 ? " , " : " ") + (s != 0 ? " : " : "") : "";
     var sDisplay = s !== 0 ? s + (s == 1 ? " " : "  ") : "";
-    return hDisplay + mDisplay + sDisplay;
+    return hDisplay + mDisplay + sDisplay + "s";
   }
+  const audioSrc = useRef(null);
+  console.log(audioSrc.current.duration);
+
   return (
     <div
       data-aos="flip-down"
       onClick={() => setSongNum(data.id - 1)}
       className=" hover:bg-base-200 transition-all font-semibold flex items-center cursor-pointer rounded-xl w-full h-16 md:px-5   my-2"
     >
+      <audio ref={audioSrc} src={data.src}></audio>
       <div className=" hidden md:block">{data.id}</div>
       <div className=" flex items-center space-x-7">
         <img
@@ -45,7 +50,7 @@ const MusicList = ({ data }) => {
         {data.artist}
       </div>
       <div className=" hidden xl:block w-20 ml-32">
-        {CalculateTime(data.time)}
+        {CalculateTime(audioSrc.current.duration)}
       </div>
       <div className=" hidden md:block 2xl:ml-32 hover:bg-base-300 p-3 rounded-lg">
         Play now

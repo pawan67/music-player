@@ -22,24 +22,12 @@ const SettingsComponent = () => {
             tabIndex="0"
             className="  dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li onClick={() => setTheme("garden")}>
-              <a>Default</a>
-            </li>
-            <li onClick={() => setTheme("dark")}>
+            <li onClick={() => setTheme("black")}>
               <a>Dark</a>
             </li>
-            <li onClick={() => setTheme("black")}>
-              <a>Black</a>
-            </li>
 
-            <li onClick={() => setTheme("acid")}>
-              <a>Acid </a>
-            </li>
-            <li onClick={() => setTheme("lemonade")}>
-              <a>Lemonade 🍋</a>
-            </li>
             <li onClick={() => setTheme("wireframe")}>
-              <a>Wireframe</a>
+              <a>Light</a>
             </li>
           </ul>
         </div>
