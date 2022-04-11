@@ -12,11 +12,15 @@ const SearchComponent = () => {
   const [loading, setLoading] = useState(false);
   const handleSearch = (e) => {
     e.preventDefault();
-    setLoading(true);
-    axios
-      .get(`https://saavn.me/search/songs?query=${text}&page=1`)
-      .then((response) => setData(response.data.results))
-      .finally(() => setLoading(false));
+    if (text == "") {
+      alert("Please enter a search term");
+    } else {
+      setLoading(true);
+      axios
+        .get(`https://saavn.me/search/songs?query=${text}&page=1`)
+        .then((response) => setData(response.data.results))
+        .finally(() => setLoading(false));
+    }
   };
   return (
     <div>
@@ -38,16 +42,16 @@ const SearchComponent = () => {
             </button>
           </div>
           <div className="form-control">
-            <div className="input-group">
+            <div className="  input-group">
               <form onSubmit={handleSearch}>
                 <input
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   type="text"
                   placeholder="Search songs and artists"
-                  className="input w-[70vw]  md:w-[300px] lg:w-[500px]  xl:w-[700px] input-bordered"
+                  className="input w-[70vw]  md:w-[300px] lg:w-[500px]  xl:w-[700px] input-bordered "
                 />
-                <button type="submit" className="btn btn-square">
+                <button type="submit" className=" btn btn-square ">
                   <BiSearchAlt />
                 </button>
               </form>
