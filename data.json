@@ -27,7 +27,7 @@
     "id": 4,
     "title": "Jeet ",
     "artist": "Ritviz",
-    "time": 182,
+    "time": 189.415,
     "src": "/music/Jeet.mp3",
     "imgSrc": "/images/jeet.jpg"
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "title": "Khamoshi ",
     "artist": "Ritviz",
-    "time": 182,
+    "time": 169.204,
     "src": "/music/Khamoshi - Ritviz, Karan Kanchan.m4a",
     "imgSrc": "/images/khamoshi.jpg"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "title": "Let Me Down Slowly ",
     "artist": "Alec Benjamin",
-    "time": 182,
+    "time": 230.19102,
     "src": "/music/Let Me Down Slowly - Alec Benjamin.m4a",
     "imgSrc": "/images/letmedown.jpg"
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "title": "Mood Remix ",
     "artist": "Justin Bieber, J Balvin, Iann dior",
-    "time": 182,
+    "time": 231.444898,
     "src": "/music/Mood__Remix__feat__Justin_Bieber__J_Balvin___iann_dior.mp3",
     "imgSrc": "/images/mood.jpg"
   },
@@ -60,7 +60,7 @@
     "id": 8,
     "title": "Sidewalks ",
     "artist": "The Weeknd",
-    "time": 182,
+    "time": 230.556735,
     "src": "/music/Sidewalks.mp3",
     "imgSrc": "/images/sidewalks.jpg"
   },
@@ -69,7 +69,7 @@
     "id": 9,
     "title": "Starboy ",
     "artist": "The Weeknd",
-    "time": 182,
+    "time": 153.234286,
     "src": "/music/Starboy.mp3",
     "imgSrc": "/images/starboy.png"
   },
@@ -77,7 +77,7 @@
     "id": 10,
     "title": "Tragic ",
     "artist": "Youngboy",
-    "time": 182,
+    "time": 210.99102,
     "src": "/music/TRAGIC__feat__Youngboy_Never_Broke_Again___Internet_Money_.mp3",
     "imgSrc": "/images/tragic.jpg"
   },
@@ -85,7 +85,7 @@
     "id": 11,
     "title": "Stereo Hearts  ",
     "artist": "Gym Class Heroes feat Adam Levine",
-    "time": 182,
+    "time": 218.117,
     "src": "/music/Gym Class Heroes - Stereo Hearts feat Adam Levine.mp3",
     "imgSrc": "/images/stereoHeart.jpg"
   },
@@ -93,7 +93,7 @@
     "id": 12,
     "title": "Hips Don't Lie  ",
     "artist": "Shakira",
-    "time": 182,
+    "time": 175.621224,
     "src": "/music/Hips Don't Lie - Shakira.m4a",
     "imgSrc": "/images/Shakira.png"
   },
@@ -101,7 +101,7 @@
     "id": 13,
     "title": "Control  ",
     "artist": "Nzau",
-    "time": 182,
+    "time": 234.432,
     "src": "/music/Nzau - Control.mp3",
     "imgSrc": "/images/control.jpg"
   },
@@ -109,7 +109,7 @@
     "id": 14,
     "title": "Often Kygo Remix  ",
     "artist": "The Weeknd",
-    "time": 182,
+    "time": 210.12898,
     "src": "/music/The Weeknd - Often Kygo Remix.mp3",
     "imgSrc": "/images/often.jpg"
   },
@@ -117,7 +117,7 @@
     "id": 15,
     "title": "Stay  ",
     "artist": "ZEDD",
-    "time": 182,
+    "time": 110.915918,
     "src": "/music/ZEDD - Stay.mp3",
     "imgSrc": "/images/stay.jpg"
   },
@@ -125,7 +125,7 @@
     "id": 16,
     "title": "Hope  ",
     "artist": "XXXTENTACION",
-    "time": 182,
+    "time": 110.915918,
     "src": "/music/XXXTENTACION - Hope.mp3",
     "imgSrc": "/images/hope.jpg"
   }
