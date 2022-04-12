@@ -9,6 +9,7 @@ import { RiSearchFill, RiSettings4Fill } from "react-icons/ri";
 import { BsBoxArrowLeft, BsFileMusicFill } from "react-icons/bs";
 import { VscClose } from "react-icons/vsc";
 import { IoLogIn } from "react-icons/io5";
+import { GrFormClose } from "react-icons/gr";
 import { useUserContext } from "../context/userContext";
 import { useRouter } from "next/router";
 import Data from "../data.json";
@@ -39,9 +40,11 @@ const Navbar = () => {
         </div>
         <div
           onClick={() => setAlert(false)}
-          className=" bg-base-300 px-4 font-bold text-center rounded-full py-2 cursor-pointer"
+          className=" bg-base-300 px-4 font-bold text-center rounded-2xl mt-2 sm:mt-0 py-2 cursor-pointer flex justify-center"
         >
-          <div>x</div>
+          <div>
+            <GrFormClose />
+          </div>
         </div>
       </div>
       <div className=" z-50 relative">

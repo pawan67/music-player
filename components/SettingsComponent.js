@@ -26,7 +26,7 @@ const SettingsComponent = () => {
               <a>Dark</a>
             </li>
 
-            <li onClick={() => setTheme("wireframe")}>
+            <li onClick={() => setTheme("acid")}>
               <a>Light</a>
             </li>
           </ul>
@@ -52,9 +52,10 @@ const SettingsComponent = () => {
             />
             <p>Pawan67</p>
           </div>
-          <p className=" mt-5 font-medium ">
-            I am self-taught Front-end Web developer who loves to build amazing
-            and useful websites.
+          <p className=" mt-5 font-medium max-w-[1000px] ">
+            My name is Pawan I'm a Front End Developer based in India 🇮🇳. I
+            describe myself as a passionate developer who loves coding, open
+            source, and the web platform ❤️.
           </p>
         </div>
       </div>

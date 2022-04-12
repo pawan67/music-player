@@ -16,7 +16,7 @@ const Container = () => {
     >
       <h1 className=" text-xl mt-5 sm:text-3xl font-bold">Home</h1>
       <div className=" justify-center md:justify-start transition-all mt-5  flex gap-5 flex-wrap">
-        {Data.map((item) => (
+        {Data.slice(5, 23).map((item) => (
           <Card key={item.id} data={item} />
         ))}
       </div>

@@ -31,6 +31,7 @@
     "src": "/music/Jeet.mp3",
     "imgSrc": "/images/jeet.jpg"
   },
+
   {
     "id": 5,
     "title": "Khamoshi ",
@@ -128,5 +129,61 @@
     "time": 110.915918,
     "src": "/music/XXXTENTACION - Hope.mp3",
     "imgSrc": "/images/hope.jpg"
+  },
+  {
+    "id": 17,
+    "title": "After Hours  ",
+    "artist": "Weeknd",
+    "time": 110.915918,
+    "src": "/music/After_Hours.mp3",
+    "imgSrc": "/images/afterHours.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Pray For Me  ",
+    "artist": "The Weeknd ft.Kendrick Lamar",
+    "time": 110.915918,
+    "src": "/music/Pray_For_Me__with_Kendrick_Lamar_.mp3",
+    "imgSrc": "/images/prayFor.jpg"
+  },
+  {
+    "id": 19,
+    "title": "The Morning  ",
+    "artist": "The Weeknd",
+    "time": 110.915918,
+    "src": "/music/The_Morning.mp3",
+    "imgSrc": "/images/morning.jpg"
+  },
+  {
+    "id": 20,
+    "title": " Scared To Live ",
+    "artist": "The Weeknd",
+    "time": 110.915918,
+    "src": "/music/Scared_To_Live.mp3",
+    "imgSrc": "/images/scared.jpg"
+  },
+  {
+    "id": 21,
+    "title": "High For This  ",
+    "artist": "The Weeknd",
+    "time": 110.915918,
+    "src": "/music/High_For_This.mp3",
+    "imgSrc": "/images/high.jpg"
+  },
+  {
+    "id": 22,
+    "title": "Blinding Lights  ",
+    "artist": "The Weeknd",
+    "time": 110.915918,
+    "src": "/music/Blinding_Lights.mp3",
+    "imgSrc": "/images/blinding.jpg"
+  },
+  {
+    "id": 23,
+    "title": "Reminder  ",
+    "artist": "The Weeknd",
+    "time": 110.915918,
+    "src": "/music/Reminder.mp3",
+    "imgSrc": "/images/starboy.jpg"
   }
 ]
